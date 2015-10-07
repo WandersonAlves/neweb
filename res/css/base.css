@@ -51,7 +51,7 @@ footer {
     margin: 85px auto;
     width: 75%;
     max-height: 75%;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #sobre-div h2 {
