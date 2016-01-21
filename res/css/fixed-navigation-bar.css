@@ -77,18 +77,24 @@ a:visited.sitename {
     box-shadow: 0 0 20px black;
     display: none;
 }
+
 @media only screen and (max-width: 800px) {
+
+    .fixed-nav-bar {top: 0;} /** BARRA NO TOPO COM VIEWPORT 800PX **/
 
     .menu {
         position: relative;
         width: 100%;
     }
-.menu ul { 
-        margin: -130px 15px 0px 0px;
+    .menu ul {
+        margin: -20px 5px 0px 0px;
         padding: 0;
-        width: 75%;
+        text-align: left;
+        width: 60%;
         font-family: 'Open Sans', sans-serif; font-weight: 600;
     }
+    .menu-items a { font-size: 12px; }
+    .menu a,.menu a:visited { font-size: 12px; }
     .menu-items {
         position: static;
         display: none;
