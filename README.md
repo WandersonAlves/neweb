@@ -9,3 +9,4 @@ Membros:
 - Paulo André
 - Guilherme Leão
 - Wanderson Alves
+- Dionato Souza
