@@ -138,11 +138,9 @@ p {
 
 #main-text {
     /** TODO: Centralizar essa div corretamente e o seu texto **/
-    position:fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -9em; /*set to a negative number 1/2 of your height*/
-    margin-left: -35em; /*set to a negative number 1/2 of your width*/
+    position:relative;
+    margin: 0 auto;
+    padding-top: 11.4em;
 }
 
 
