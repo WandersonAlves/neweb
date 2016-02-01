@@ -1,0 +1,32 @@
+{
+  "name": "neweb",
+  "version": "1.0.0",
+  "description": "![Alt text](https://raw.githubusercontent.com/WandersonAlves/neweb/master/res/assets/about/logo.png?raw=true)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7"
+  },
+  "devDependencies": {
+    "gulp-copy2": "^0.2.0",
+    "run-sequence": "^1.1.5",
+    "serverstatic": "^0.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WandersonAlves/neweb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WandersonAlves/neweb/issues"
+  },
+  "homepage": "https://github.com/WandersonAlves/neweb#readme"
+}
