@@ -63,7 +63,7 @@ $(document).ready(function () {
         // Remove a borda dos botões e tudo alterado por esse .js
         $('#sobre, #projetos, #contato, #infra').removeAttr('style');
         // Esconde as respectivas divs
-        $('#sobre-div, #projetos-div, #contato-div').velocity("fadeOut", {
+        $('#sobre-div, #projetos-div, #contato-div, #infra-div').velocity("fadeOut", {
             duration: 500
         });
         // slideUp esconde o footer ???
@@ -91,7 +91,7 @@ $(document).ready(function () {
             'border-bottom': 'none',
             opacity: 0.5
         });
-        $('#projetos-div, #contato-div').css('display', 'none');
+        $('#projetos-div, #contato-div, #infra-div').css('display', 'none');
         $('#sobre-div').velocity("fadeIn", {
             duration: 500
         });
@@ -101,7 +101,7 @@ $(document).ready(function () {
             'border-bottom': 'none',
             opacity: 0.5
         });
-        $('#sobre-div, #contato-div').css('display', 'none');
+        $('#sobre-div, #contato-div, #infra-div').css('display', 'none');
         $('#projetos-div').velocity("fadeIn", {
             duration: 500
         });
@@ -111,7 +111,7 @@ $(document).ready(function () {
             'border-bottom': 'none',
             opacity: 0.5
         });
-        $('#sobre-div, #projetos-div').css('display', 'none');
+        $('#sobre-div, #projetos-div, #infra-div').css('display', 'none');
         $('#contato-div').velocity("fadeIn", {
             duration: 500
         });
@@ -121,8 +121,8 @@ $(document).ready(function () {
             'border-bottom': 'none',
             opacity: 0.5
         });
-        $('#sobre-div, #projetos-div').css('display', 'none');
-        $('#contato-div').velocity("fadeIn", {
+        $('#sobre-div, #projetos-div, #contato-div').css('display', 'none');
+        $('#infra-div').velocity("fadeIn", {
             duration: 500
         });
     });
