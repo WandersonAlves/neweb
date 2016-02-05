@@ -12,7 +12,9 @@
     "gulp-util": "^3.0.7"
   },
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "gulp-copy2": "^0.2.0",
+    "protractor": "^3.0.0",
     "run-sequence": "^1.1.5"
   },
   "scripts": {

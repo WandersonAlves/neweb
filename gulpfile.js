@@ -4,7 +4,8 @@ var gulp  = require('gulp'),
     uglify = require('gulp-uglify'),
     concatCss = require('gulp-concat-css'),
     copy = require('gulp-copy2'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    browserSync = require('browser-sync').create();
 
 // create a default task and just log a message
 gulp.task('default', function() {
@@ -42,3 +43,13 @@ gulp.task('copy', function () {
 gulp.task('build', function(callback) {
     runSequence('build-js', 'build-css', 'copy', callback);
 });
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+
