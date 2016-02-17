@@ -44,12 +44,15 @@ gulp.task('build', function(callback) {
     runSequence('build-js', 'build-css', 'copy', callback);
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('server', function() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
+    
+    gulp.watch("./res/js/*.js").on('change', browserSync.reload);
+    gulp.watch("./res/css/*.css").on('change', browserSync.reload);
 });
 
 
