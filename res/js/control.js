@@ -16,9 +16,11 @@ $(window).load(function () {
         scrollInertia: 100
     });
     // NOTE Workround pesado
-    $('.menu-items').velocity('fadeOut', {
-        duration: 500
-    });
+    if ($('body').width() <= 800) {
+        $('.menu-items').velocity('fadeOut', {
+            duration: 500
+        });
+    }
 });
 
 $(document).ready(function () {
