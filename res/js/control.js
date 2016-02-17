@@ -15,6 +15,10 @@ $(window).load(function () {
         },
         scrollInertia: 100
     });
+    // NOTE Workround pesado
+    $('.menu-items').velocity('fadeOut', {
+        duration: 500
+    });
 });
 
 $(document).ready(function () {
@@ -28,13 +32,15 @@ $(document).ready(function () {
         $('.menu-items').velocity('fadeIn', {
             duration: 500
         });
-        
-        $('#sobre-div, #projetos-div, #contato-div, #infra-div').velocity("fadeOut", {
-            duration: 500
-        });
+
+        if ($('body').width() <= 800) {
+            $('#sobre-div, #projetos-div, #contato-div, #infra-div, #main-text').velocity("fadeOut", {
+                duration: 500
+            });
+        }
     });
     // Quando o menu responsivo está sendo exibido
-    $('.hide, #responsive_hide').on('click', function () {
+    $('.hide').on('click', function () {
         $('.menu-items').velocity('fadeOut', {
             duration: 500
         });
@@ -59,14 +65,16 @@ $(document).ready(function () {
         $('#main-text').velocity("fadeOut", {
             duration: 500
         });
-
-        $('.menu-items').velocity('fadeOut', {
-            duration: 500
-        });
+        
+        if ($('body').width() <= 800) {
+            $('.menu-items').velocity('fadeOut', {
+                duration: 500
+            });
+        }
         return false;
     });
 
-    /*$("#mid-arrow").on('click', function () {
+    $("#mid-arrow").on('click', function () {
 
         hasFooter = false;
         // Remove a borda dos botões e tudo alterado por esse .js
@@ -92,7 +100,7 @@ $(document).ready(function () {
         $('#mid-arrow').css({
             "display": "none"
         });
-    });*/
+    });
 
     $("#sobre").on('click', function () {
         $('#projetos, #contato, #infra').css({
