@@ -83,8 +83,6 @@ a:visited.sitename {
 }
 
 @media only screen and (max-width: 800px) {
-
-    /**.fixed-nav-bar {top: 0;} /** BARRA NO TOPO COM VIEWPORT 800PX **/
     
     .menu img {
         bottom: 34px;
