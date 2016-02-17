@@ -25,13 +25,17 @@ $(document).ready(function () {
 
     // Quando o menu responsivo não está sendo exibido
     $('.show').on('click', function () {
-        $('.menu-items').velocity('slideDown', {
+        $('.menu-items').velocity('fadeIn', {
+            duration: 500
+        });
+        
+        $('#sobre-div, #projetos-div, #contato-div, #infra-div').velocity("fadeOut", {
             duration: 500
         });
     });
     // Quando o menu responsivo está sendo exibido
-    $('.hide').on('click', function () {
-        $('.menu-items').velocity('slideUp', {
+    $('.hide, #responsive_hide').on('click', function () {
+        $('.menu-items').velocity('fadeOut', {
             duration: 500
         });
     });
@@ -55,10 +59,15 @@ $(document).ready(function () {
         $('#main-text').velocity("fadeOut", {
             duration: 500
         });
+
+        $('.menu-items').velocity('fadeOut', {
+            duration: 500
+        });
         return false;
     });
 
-    $('#mid-arrow').on('click', function () {
+    /*$("#mid-arrow").on('click', function () {
+
         hasFooter = false;
         // Remove a borda dos botões e tudo alterado por esse .js
         $('#sobre, #projetos, #contato, #infra').removeAttr('style');
@@ -83,8 +92,7 @@ $(document).ready(function () {
         $('#mid-arrow').css({
             "display": "none"
         });
-    });
-
+    });*/
 
     $("#sobre").on('click', function () {
         $('#projetos, #contato, #infra').css({
