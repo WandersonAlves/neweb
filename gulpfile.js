@@ -51,8 +51,7 @@ gulp.task('server', function() {
         }
     });
     
-    gulp.watch("./res/js/*.js").on('change', browserSync.reload);
-    gulp.watch("./res/css/*.css").on('change', browserSync.reload);
+    gulp.watch(["./res/js/*.js", "./res/css/*.css", "./res/views/*.html"]).on('change', browserSync.reload);
 });
 
 
