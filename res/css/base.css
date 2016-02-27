@@ -45,8 +45,6 @@ footer {
     right: 0;
 }
 
-
-
 #sobre-div {
     margin: 85px auto;
     width: 75%;
@@ -85,8 +83,6 @@ p {
    color: red;
 }
 
-
-
 .sobre-inner img {
     margin-top: 20px;
     width: 120px;
@@ -105,7 +101,6 @@ p {
     -webkit-animation: beat .25s infinite alternate;
     animation: beat .25s infinite alternate;
     -webkit-transform-origin: center;
-    -ms-transform-origin: center;
     transform-origin: center;
 }
 
@@ -143,5 +138,3 @@ p {
     h1 {font-size: 5.5vw; }
     h2 {font-size: 2.6vw;}
 }
-
-

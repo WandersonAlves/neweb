@@ -17,7 +17,6 @@
     position: absolute;
 }
 
-
 /* Example responsive navigation menu  */
 
 .fixed-nav-bar li,
@@ -131,9 +130,6 @@ a:visited.sitename {
     .hide {
         display: none;
     }
-    #menu:target .show {
-        display: none;
-    }
     #menu:target .hide,
     #menu:target .menu-items {
         display: inline-block;
@@ -157,4 +153,8 @@ a:visited.sitename {
 .pause_slider {
     -webkit-transition: opacity 0.3s ease-in;
     transition: opacity 0.3s ease-in
+}
+
+#sobre, #projetos, #infra, #contato {
+    cursor: pointer
 }
