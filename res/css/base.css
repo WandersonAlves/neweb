@@ -23,7 +23,7 @@
 .css {color: royalblue}
 .angular {color: red}
 /** Verificar uma forma de deixar textos responsivos **/
-h1 {font-size: 4vw; font-family: 'Open Sans', sans-serif; font-weight: 600; color: white; position: relative;
+h1 {font-size: 3vw; font-family: 'Open Sans', sans-serif; font-weight: 600; color: white; position: relative;
     text-align: center; text-shadow: 0 0 40px #000000;}
 h2 {font-size: 1.6vw; font-family: 'Open Sans', sans-serif; font-weight: 400; color: white; position: relative;
     text-align: center;text-shadow: 0 0 20px #000000;}

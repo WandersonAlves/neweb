@@ -13,35 +13,47 @@ gulp.task('default', function() {
 });
 // build js files uglifying and concating then
 gulp.task('build-js', function() {
-    return gulp.src(['res/js/**/*.js',
-                    'bower_components/angular/angular.js',
-                    'bower_components/jquery/dist/jquery.min.js',
-                    'bower_components/jquery-mousewheel/jquery.mousewheel.min.js',
-                    'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
+    return gulp.src([
                     'bower_components/PACE/pace.min.js',
-                    'bower_components/ResponsiveSlides/responsiveslides',
-                    'bower_components/velocity/velocity.min.js'])
+                    'bower_components/angular/angular.js',
+                    'res/js/directives.js',
+                    'bower_components/jquery/dist/jquery.min.js',
+                    'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
+                    'bower_components/velocity/velocity.min.js',
+                    'bower_components/ResponsiveSlides/responsiveslides.js',
+                    'res/js/control.js',
+                    ])
         .pipe(concat('build.js'))
-        .pipe(gulp.dest('dist/'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('public/'));
 });
 
 gulp.task('build-css', function () {
-    return gulp.src('res/css/*.css')
+    return gulp.src([                    
+                    'res/css/base.css',
+                    'res/css/fixed-navigation-bar.css',
+                    'res/css/load-screen.css',
+                    'res/css/pace-dataurl.css',
+                    'res/css/jquery.mCustomScrollbar.css'
+        ])
         .pipe(concatCss("build.css"))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('public/'));
 });
 
 gulp.task('copy', function () {
     var paths = [
-        {src: 'res/css/mCSB_buttons.png', dest: 'dist/'},
+        {src:'res/css/mCSB_buttons.png', dest: 'public/'},
+        {src:'res/assets/**', dest: 'public/res/assets/'},
+        {src:'res/views/**', dest: 'public/res/views/'}
     ];
     return copy(paths);
 });
 
-gulp.task('build', function(callback) {
+gulp.task('build', function() {
+    var callback = function () {
+        gutil.log("Remember to run 'firebase deploy' on your terminal!");
+    };
     runSequence('build-js', 'build-css', 'copy', callback);
+    
 });
 
 gulp.task('server', function() {
