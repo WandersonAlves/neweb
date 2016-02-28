@@ -1,6 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400);
 
 .rslides img {
     display: block;
@@ -18,10 +17,15 @@
     -webkit-transition: all 0.8s linear; transition: all 0.8s linear;
 }
 .change {color: #ff3030; z-index: 9999}
+.node {color: green}
+.js {color: greenyellow}
+.html {color: firebrick}
+.css {color: royalblue}
+.angular {color: red}
 /** Verificar uma forma de deixar textos responsivos **/
 h1 {font-size: 4vw; font-family: 'Open Sans', sans-serif; font-weight: 600; color: white; position: relative;
     text-align: center; text-shadow: 0 0 40px #000000;}
-h2 {font-size: 1.6vw; font-family: 'Open Sans', sans-serif; font-weight: 300; color: white; position: relative;
+h2 {font-size: 1.6vw; font-family: 'Open Sans', sans-serif; font-weight: 400; color: white; position: relative;
     text-align: center;text-shadow: 0 0 20px #000000;}
 
 
@@ -46,7 +50,7 @@ footer {
 }
 
 #sobre-div {
-    margin: 85px auto;
+    margin: 90px auto;
     width: 75%;
     max-height: 75%;
     overflow: hidden;
@@ -57,7 +61,7 @@ footer {
 }
 
 p {
-  font-size: 14px; font-family: 'Open Sans', sans-serif; font-weight: 300; color: white; position: relative;
+    font-size: 16px; font-family: 'PT Sans', sans-serif; font-weight: 400; color: white; position: relative;
 }
 
 #footer h2 {
@@ -134,7 +138,28 @@ p {
     padding-top: 11.4em;
 }
 
+.h2-sobre {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20;
+}
+
+@media only screen and (max-width: 1024px) {
+    h1 {font-size: 7vw; }
+    h2 {font-size: 5.6vw;}
+    p {font-size: 25px}
+    .sobre-inner img {margin-top: -9px; width: 44px;}
+    #sobre-div {width: 75%;}
+}
+
 @media only screen and (max-width: 800px) {
-    h1 {font-size: 5.5vw; }
-    h2 {font-size: 2.6vw;}
+    h1 {font-size: 7vw; }
+    h2 {font-size: 5.6vw;}
+    .sobre-inner img {margin-top: -9px; width: 44px;}
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {font-size: 7vw; }
+    h2 {font-size: 5.6vw;}
+    .sobre-inner img {margin-top: -9px; width: 44px;}
 }

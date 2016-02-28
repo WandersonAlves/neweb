@@ -2,12 +2,15 @@
 // o slide roda e a nossa tela de load some
 // TUDO DENTRO DE $(window).load SERA EXECUTADO QUANDO TODO O SITE FOR CARREGADO PELO CLIENTE
 $(window).load(function () {
+    
     $('#loader-wrapper, #loading-text').velocity("fadeOut", {
         duration: 500
     });
+    
     $(".rslides").responsiveSlides({
         startidx: 0
     });
+    
     $("#sobre-div").mCustomScrollbar({
         theme: "rounded-dots",
         scrollButtons: {

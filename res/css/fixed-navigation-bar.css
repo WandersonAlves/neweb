@@ -83,6 +83,8 @@ a:visited.sitename {
 
 @media only screen and (max-width: 800px) {
     
+    p {font-size: 15px}
+    
     .menu img {
         bottom: 34px;
         left: 15px;
@@ -101,8 +103,8 @@ a:visited.sitename {
         text-align: left;
         top: 0;
     }
-    .menu-items a { font-size: 12px; }
-    .menu a,.menu a:visited { font-size: 12px; }
+    .menu-items a { font-size: 15px; }
+    .menu a,.menu a:visited { font-size: 15px; }
     .menu-items {
         position: fixed;
         right: 0px;
