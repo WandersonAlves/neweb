@@ -13,7 +13,9 @@
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "express": "^4.13.4",
     "gulp-copy2": "^0.2.0",
+    "gulp-html-replace": "^1.5.5",
     "protractor": "^3.0.0",
     "run-sequence": "^1.1.5"
   },
