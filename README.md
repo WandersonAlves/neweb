@@ -10,3 +10,10 @@ Membros:
 - Guilherme Leão
 - Wanderson Alves
 - Dionato Souza
+
+# Dev Server
+`gulp server`
+# Build
+`gulp build`
+# Testing
+`protractor spec/conf.js` note: `node server.js` must be running
