@@ -2,15 +2,15 @@
 // o slide roda e a nossa tela de load some
 // TUDO DENTRO DE $(window).load SERA EXECUTADO QUANDO TODO O SITE FOR CARREGADO PELO CLIENTE
 $(window).load(function () {
-    
+    'use strict';
     $('#loader-wrapper, #loading-text').velocity("fadeOut", {
         duration: 500
     });
-    
+
     $(".rslides").responsiveSlides({
         startidx: 0
     });
-    
+
     $("#sobre-div").mCustomScrollbar({
         theme: "rounded-dots",
         scrollButtons: {
@@ -27,10 +27,10 @@ $(window).load(function () {
 });
 
 $(document).ready(function () {
-
-    var hasFooter = false;
-    var full_height = "99.1%";
-    var original_height = "78px";
+    'use strict';
+    var hasFooter = false,
+        full_height = "99.1%",
+        original_height = "78px";
 
     // Quando o menu responsivo não está sendo exibido
     $('.show').on('click', function () {
@@ -62,7 +62,7 @@ $(document).ready(function () {
         $(this).css('opacity', 1);
         // ps: as animações do velocity quase sempre escondem o elemento também
         if (!hasFooter) {
-            hasFooter = true
+            hasFooter = true;
             $('footer').velocity("slideDown", {
                 duration: 500
             });
@@ -70,7 +70,7 @@ $(document).ready(function () {
         $('#main-text').velocity("fadeOut", {
             duration: 500
         });
-        
+
         if ($('body').width() <= 800) {
             $('.menu-items').velocity('fadeOut', {
                 duration: 500

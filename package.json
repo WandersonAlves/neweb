@@ -1,7 +1,7 @@
 {
   "name": "neweb",
   "version": "1.0.0",
-  "description": "![Alt text](https://raw.githubusercontent.com/WandersonAlves/neweb/master/res/assets/about/logo.png?raw=true)",
+  "description": "Projeto em desenvolvimento da 'start-up' NEW.EB/ para desenvolvimento de sites e problemas de infraestrutura. (Este projeto é um showcase de automação de build front-end + automação com jenkins + deploy no docker).",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.0",
