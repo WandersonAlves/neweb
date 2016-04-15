@@ -1,8 +1,8 @@
 # NEW.EB/
 
-![Alt text](https://raw.githubusercontent.com/WandersonAlves/neweb/master/res/assets/about/logo.png?raw=true)
+Projeto em desenvolvimento da 'start-up' NEW.EB/ para desenvolvimento de sites e problemas de infraestrutura. (Este projeto é um showcase de automação de build front-end + automação com jenkins + deploy no docker).
 
-Projeto em desenvolvimento da 'start-up' NEW.EB/ para desenvolvimento de sites e problemas de infraestrutura.
+WIP Project
 
 Membros:
 
