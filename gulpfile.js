@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
     concatCss = require('gulp-concat-css'),
+    cleanCss = require('gulp-clean-css'),
     copy = require('gulp-copy2'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create(),
@@ -36,7 +36,9 @@ gulp.task('build-css', function () {
         'res/css/load-screen.css',
         'res/css/pace-dataurl.css',
         'res/css/jquery.mCustomScrollbar.css'
-    ]).pipe(concatCss("build.css")).pipe(gulp.dest('public/'));
+    ]).pipe(concatCss("build.css")).pipe(cleanCss({
+        compatibility: 'ie8'
+    })).pipe(gulp.dest('public/'));
 });
 
 gulp.task('copy', function () {

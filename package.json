@@ -7,13 +7,12 @@
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "express": "^4.13.4",
+    "gulp-clean-css": "^2.0.6",
     "gulp-copy2": "^0.2.0",
     "gulp-html-replace": "^1.5.5",
     "protractor": "^3.0.0",
