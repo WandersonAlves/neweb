@@ -1,17 +1,18 @@
 exports.config = {
-    framework: 'mocha',
+    framework: 'jasmine',
     //seleniumAddress: 'http://localhost:4444/wd/hub',
     capabilities: {
         'browserName': 'chrome'
     },
-    mochaOpts: {
-        reporter: 'spec',
-        slow: 3000,
-        enableTimeouts: false
+    onPrepare: function () {
+        var SpecReporter = require('jasmine-spec-reporter');
+        // add jasmine spec reporter
+        jasmine.getEnv().addReporter(new SpecReporter({
+            displayStacktrace: 'all'
+        }));
+    },
+    jasmineNodeOpts: {
+        print: function () {}
     },
     specs: ['tests/**/*.js']
 };
-
-if (process.env.SNAP_CI) {
-    exports.config.chromeDriver = '/usr/local/bin/chromedriver';
-}
