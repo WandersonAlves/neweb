@@ -10,6 +10,7 @@ before_script:
   - bower install
   - gulp build
   - node daemon.js start
+  - /home/travis/build/WandersonAlves/neweb/node_modules/protractor/bin/webdriver-manager update
 script: protractor spec/conf.js
 after_script:
 - node daemon.js stop
