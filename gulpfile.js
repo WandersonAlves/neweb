@@ -79,17 +79,6 @@ gulp.task('build', function () {
 
 });
 
-gulp.task('test', function () {
-    'use strict';
-    exec('node server.js');
-    exec('protractor spec/conf.js');
-});
-
-gulp.task('protractor', function () {
-    'use strict';
-    runSequence('build', 'test');
-});
-
 gulp.task('server', function () {
     'use strict';
     browserSync.init({

@@ -1,6 +1,7 @@
 beforeEach(function () {
     browser.get('http://localhost:8080/');
     browser.manage().window().setSize(1600, 1000);
+    browser.waitForAngular();
 }, 10000);
 
 describe('About section testing', function () {

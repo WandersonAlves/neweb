@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "daemonize2": "^0.4.2",
     "expect.js": "^0.3.1",
     "express": "^4.13.4",
     "gulp-clean-css": "^2.0.6",
