@@ -1,6 +1,5 @@
 beforeEach(function () {
     browser.get('http://localhost:8081/');
-    browser.manage().window().setSize(1600, 1000);
     browser.waitForAngular();
 }, 10000);
 

@@ -4,8 +4,10 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-            args: ['no-sandbox']
-        }
+            args: ['no-sandbox',
+                   '--window-size=1000,1600']
+        },
+        specs: ['tests/web/**/*.js']
     },
     onPrepare: function () {
         var SpecReporter = require('jasmine-spec-reporter');
@@ -16,6 +18,5 @@ exports.config = {
     },
     jasmineNodeOpts: {
         print: function () {}
-    },
-    specs: ['tests/**/*.js']
+    }
 };
