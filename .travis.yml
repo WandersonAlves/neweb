@@ -24,6 +24,8 @@ before_script:
   - node daemon.js start
   - sleep 1
   - /home/travis/build/WandersonAlves/neweb/node_modules/protractor/bin/webdriver-manager update
-script: protractor spec/conf.js
+script: 
+  - protractor spec/web-conf.js
+  - protractor spec/mobile-conf.js
 after_script:
-- node daemon.js stop
+  - node daemon.js stop
