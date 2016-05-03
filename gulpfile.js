@@ -6,10 +6,8 @@ var gulp = require('gulp'),
     copy = require('gulp-copy2'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create(),
-    htmlreplace = require('gulp-html-replace'),
-    exec = require('child_process').exec;
+    htmlreplace = require('gulp-html-replace');
 
-// create a default task and just log a message
 gulp.task('default', function () {
     'use strict';
     return gutil.log('Gulp is running!');
