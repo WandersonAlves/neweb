@@ -5,16 +5,9 @@
 [![Stars](https://img.shields.io/github/stars/WandersonAlves/neweb.svg)](https://github.com/WandersonAlves/neweb/stargazers)
 
 
-Projeto em desenvolvimento da 'start-up' NEW.EB/ para desenvolvimento de sites e problemas de infraestrutura. (Este projeto é um showcase de automação de build front-end + automação com jenkins + deploy no docker).
+Projeto em desenvolvimento da 'start-up' NEW.EB/ para desenvolvimento de sites e problemas de infraestrutura.
 
 WIP Project
-
-Membros:
-
-- Paulo André
-- Guilherme Leão
-- Wanderson Alves
-- Dionato Souza
 
 # Dev Server
 `gulp server`
