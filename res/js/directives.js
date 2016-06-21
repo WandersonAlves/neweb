@@ -18,9 +18,4 @@ directive("infra", function () {
     return {
         templateUrl: 'res/views/infra.html'
     }
-}).
-directive("customFooter", function () {
-    return {
-        templateUrl: 'res/views/customFooter.html'
-    }
 });

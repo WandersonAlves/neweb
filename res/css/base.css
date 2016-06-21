@@ -48,11 +48,12 @@ footer {
     left: 0;
     right: 0;
 }
-
+#sobre-div, #projetos-div, #contato-div {
+  margin: 90px auto;
+  width: 85%;
+  max-height: 75%;
+}
 #sobre-div {
-    margin: 90px auto;
-    width: 75%;
-    max-height: 75%;
     overflow: hidden;
 }
 
@@ -112,9 +113,7 @@ p {
 
 @keyframes beat { to { -webkit-transform: scale(1.4); transform: scale(1.4) } }
 
-.name {
-    border-bottom: 2px solid red;
-}
+
 
 .sobre-inner2 p{
     text-align: justify;
