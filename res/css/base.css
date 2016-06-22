@@ -1,164 +1,236 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400);
-
-.rslides img {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-.rslides {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 0;
-    overflow: hidden;
-    -webkit-transition: all 0.8s linear; transition: all 0.8s linear;
-}
-.change {color: #ff3030; z-index: 9999}
-.node {color: green}
-.js {color: greenyellow}
-.html {color: firebrick}
-.css {color: royalblue}
-.angular {color: red}
-/** Verificar uma forma de deixar textos responsivos **/
-h1 {font-size: 3vw; font-family: 'Open Sans', sans-serif; font-weight: 600; color: white; position: relative;
-    text-align: center; text-shadow: 0 0 40px #000000;}
-h2 {font-size: 1.6vw; font-family: 'Open Sans', sans-serif; font-weight: 400; color: white; position: relative;
-    text-align: center;text-shadow: 0 0 20px #000000;}
-
-
-#reset {
-    margin: 0;
-    float: none;
-    top: 0px;
-}
-
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
 body {
-    background-color: #888;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
 }
-
-footer {
-    position: fixed;
-    background-color: black;
-    width: 100%;
-    height: 80px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-#sobre-div, #projetos-div, #contato-div {
-  margin: 90px auto;
-  width: 85%;
-  max-height: 75%;
-}
-#sobre-div {
-    overflow: hidden;
-}
-
-#sobre-div h2 {
-    text-align: left;
-}
-
 p {
-    font-size: 16px; font-family: 'PT Sans', sans-serif; font-weight: 400; color: white; position: relative;
+    color: black;
+    font-size: 1.15em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
 }
-
-#footer h2 {
-    font-size: 12px;
-    text-align: left;
+h3 {
+    font-size: 1em;
 }
-
-.col-75 {
-    float: left;
-    padding-left: 20px;
-    text-align: left;
-    margin: 15px auto;
-    width: 50%;
+h1, h3 {
+    color: #444444;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
 }
-
-.sobre-inner {
-    margin: 30px auto;
-    position: relative;
-    width: 80%;
+footer {
+    font-size: 0.85em;
+    background: #191919 url("../img/dust.png") repeat;
+    height: 180px;
+    margin-top: 60px;
+    padding-bottom: 30px;
+    padding-top: 80px;
 }
-
-.name:first-letter {
-   color: red;
-}
-
 .sobre-inner img {
     margin-top: 20px;
-    width: 120px;
+    width: 180px;
     border: 2px solid red;
     border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+}
+.global-margin {
+    margin: 5%;
+}
+.node {
+    color: green
+}
+.js {
+    color: greenyellow
+}
+.html {
+    color: firebrick
+}
+.css {
+    color: royalblue
+}
+.angular {
+    color: red
+}
+.navbar-default .navbar-nav> li> a {
+    color: white;
+    font-weight: 600;
+    -webkit-transition: all 0.2s linear 0.1s;
+    transition: all 0.2s linear 0.1s;
 }
 
-.sobre-inner2 {
-    margin-left: 17.5%;
-}
+/** Borda do menu responsivo no topo **/
 
-.heart {
+.navbar-default {
+    border-color: rgba(0, 0, 0, 0);
+    border-top: red 4px solid;
+    background: black;
+    -webkit-transition: all 0.2s linear 0.1s;
+    transition: all 0.2s linear 0.1s;
+}
+.navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus {
     color: red;
-    -webkit-animation: beat .25s infinite alternate;
-    animation: beat .25s infinite alternate;
-    -webkit-transform-origin: center;
-    transform-origin: center;
 }
-
-@-webkit-keyframes beat { to { -webkit-transform: scale(1.4); transform: scale(1.4) } }
-
-@keyframes beat { to { -webkit-transform: scale(1.4); transform: scale(1.4) } }
-
-
-
-.sobre-inner2 p{
-    text-align: justify;
+.navbar-default .navbar-nav> .active> a, .navbar-default .navbar-nav> .active> a:hover, .navbar-default .navbar-nav> .active> a:focus {
+    color: red;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0px -3px 0px 0px red inset;
 }
-
-.leao {
+.navbar-default .navbar-nav> li> a:focus {
+    color: white;
+}
+.selected {
+    box-shadow: inset 0px -5px 0px 0px #444444;
+    color: #444444;
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar .navbar-collapse {
+    text-align: right;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+.float-left {
     float: left;
 }
-
-.left {
-    float: left;
-}
-.right {
+.float-right {
     float: right;
 }
-
-#main-text {
-    /** TODO: Centralizar essa div corretamente e o seu texto **/
-    position:relative;
-    margin: 0 auto;
-    padding-top: 11.4em;
+.font-justify {
+    text-align: justify;
 }
-
-.h2-sobre {
-    font-family: 'PT Sans', sans-serif;
+.font-center {
+    text-align: center;
+}
+.font-right {
+    text-align: right;
+}
+.font-left {
+    text-align: left;
+}
+.font-size-90 {
+    font-size: 90px;
+}
+.margin-top-10 {
+    margin-top: 10px;
+}
+.font-size-50 {
+    font-size: 50px;
+}
+.black {
+    color: black;
+}
+.white {
+    color: white;
+}
+.notosans {
+    color: #02483E;
+}
+.font-weight-300 {
+    font-weight: 300;
+}
+.font-weight-400 {
     font-weight: 400;
-    font-size: 20;
 }
-
-@media only screen and (max-width: 1024px) {
-    h1 {font-size: 7vw; }
-    h2 {font-size: 5.6vw;}
-    p {font-size: 25px}
-    .sobre-inner img {margin-top: -9px; width: 44px;}
-    #sobre-div {width: 75%;}
+.font-weight-600 {
+    font-weight: 600;
 }
-
-@media only screen and (max-width: 800px) {
-    h1 {font-size: 7vw; }
-    h2 {font-size: 5.6vw;}
-    .sobre-inner img {margin-top: -9px; width: 44px;}
+.jumbotron {
+    background-image: url("../assets/home/4.jpg");
+    background-size: cover;
+    margin-bottom: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed!important;
+    overflow: hidden;
+    box-shadow: inset 0px 119px 172px 3px rgba(0, 0, 0, 0.75);
 }
-
-@media only screen and (max-width: 600px) {
-    h1 {font-size: 7vw; }
-    h2 {font-size: 5.6vw;}
-    .sobre-inner img {margin-top: -9px; width: 44px;}
+.jumbo-container {
+    height: 100vh;
+    min-height: 100vh;
+    text-align: left;
+}
+.jumbo-header {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.jumbo-header h1 {
+    color: white;
+}
+.jumbo-div {
+    text-align: left;
+    margin-left: 25px;
+    font-weight: 600;
+}
+.row {
+    margin: 0;
+}
+.hamburguer span:before {
+    content: "\f11c";
+    font-family: 'Flaticon';
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+}
+.line-height {
+    line-height: 14px;
+}
+.change {
+    color: #ff6060;
+}
+.h1-decoration {
+    background: rgba(0, 0, 0, 0.5);
+}
+.navbar-bg {
+    background: #057C46;
+}
+.navbar-border {
+    border-color: #e7e7e7;
+}
+.jumbotron-decoration {
+    background-image: none;
+    background-size: cover;
+    background: #057C46;
+    margin-bottom: 10px;
+}
+.jumbotron-decoration h1 {
+    font-size: 3.5em;
+}
+.margin-bottom-0 {
+    margin-bottom: 0px;
+}
+.margin {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+@media screen and (max-width: 768px) {
+    .jumbotron h1, .jumbotron .h1 {
+        font-size: 3em;
+    }
+    .jumbotron p {
+        font-size: 1.3em;
+    }
+    .font-justify {
+        text-align: left;
+    }
+    .margin {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+        max-height: none;
+    }
+    .jumbo-div {
+        margin-left: 0px;
+    }
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
+    }
 }

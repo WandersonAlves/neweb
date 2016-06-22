@@ -10,67 +10,51 @@
     <meta name="keywords" content="">
     <meta name="author" content="\NEW.EB">
     <!-- build:css -->
-    
-    <link rel="stylesheet" href="res/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="res/css/base.css">
-    <link rel="stylesheet" href="res/css/fixed-navigation-bar.css">
-    <link rel="stylesheet" href="res/css/load-screen.css">
-    <link rel="stylesheet" href="res/css/pace-dataurl.css">
-    <link rel="stylesheet" href="res/css/jquery.mCustomScrollbar.css">
     <!-- endbuild -->
 </head>
 
-<body>
-
-    <div id="loader-wrapper">
-        <div id="loader">
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-        </div>
-    </div>
-
-    <h2 id=loading-text>Carregando</h2>
-
-    <div class="rslides">
-        <img src="res/assets/home/1.jpg" alt="">
-        <img src="res/assets/home/2.jpg" alt="">
-        <img src="res/assets/home/3.jpg" alt="">
-        <img src="res/assets/home/4.jpg" alt="">
-    </div>
-
-    <div class="body">
-        <div id="main-text">
-            <h1>Comprometimento com o que importa</h1>
-            <h2>Com a NE<span class="change">W.</span>EB<span class="change">/</span> temos a melhor solução para o seu site.<br>Com agilidade e o suporte que você precisa.</h2>
-        </div>
-        <nav class="fixed-nav-bar">
-            <div id="menu" class="menu">
-                <img src="res/assets/about/logo.png" />
-                <img class="play_slider" id="mid-arrow" style="display:none" src="res/assets/scrollDown.png" />
-                <ul>
-                    <a id="btn-menu" class="show" href="#menu">MENU</a>
-                    <ul class="menu-items">
-                        <li><a class="pause_slider" id="sobre">SOBRE</a></li>
-                        <li><a class="pause_slider" id="projetos">PROJETOS</a></li>
-                        <li><a class="pause_slider" id="contato">CONTRATE-NOS</a></li>
-                    </ul>
+<body ng-controller="MainController as mainControll">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed hamburguer" data-toggle="collapse" data-target="#options" aria-expanded="false">
+                    <span></span>
+                </button>
+                <!--<a class="navbar-brand" href="#"><img src="res/img/logo_jbv.png"></a>-->
+            </div>
+            <div class="collapse navbar-collapse" id="options">
+                <ul class="nav navbar-nav">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
-
-            <sobre></sobre>
-            <projetos></projetos>
-            <contato></contato>
-        </nav>
+        </div>
+    </nav>
+    <div class="jumbotron" id="top">
+        <div class="container jumbo-container">
+            <div class="jumbo-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>NEW.EB/</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="global-margin">
+        <div id="sobre" ng-include="mainControll.templates.sobre"></div>
+    </div>
+
     <!-- build:js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="res/js/directives.js"></script>
-    <script src="/bower_components/PACE/pace.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
-    <script src="bower_components/velocity/velocity.min.js"></script>
-    <script src="bower_components/ResponsiveSlides/responsiveslides.js"></script>
-    <script src="res/js/control.js"></script>
+    <script src="neweb-module.js"></script>
+    <script src="controllers/main-controller.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/js/collapse.js"></script>
     <!-- endbuild -->
 </body>
 
