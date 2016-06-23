@@ -2,9 +2,11 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
+    background-image: url("../assets/crossed_stripes.png");
+    background-repeat: repeat;
 }
 p {
-    color: black;
+    color: white;
     font-size: 1.15em;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -32,6 +34,7 @@ footer {
     border-radius: 150px;
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
+    margin-bottom: 15px;
 }
 .global-margin {
     margin: 5%;
