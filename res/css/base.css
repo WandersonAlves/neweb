@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+@import url(https://fonts.googleapis.com/css?family=Megrim);
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -26,6 +27,9 @@ footer {
     margin-top: 60px;
     padding-bottom: 30px;
     padding-top: 80px;
+}
+.megrim {
+    font-family: 'Megrim', cursive;
 }
 .sobre-inner img {
     margin-top: 20px;
@@ -66,7 +70,7 @@ footer {
 .navbar-default {
     border-color: rgba(0, 0, 0, 0);
     border-top: red 4px solid;
-    background: black;
+    background: transparent;
     -webkit-transition: all 0.2s linear 0.1s;
     transition: all 0.2s linear 0.1s;
 }
@@ -90,7 +94,7 @@ footer {
     color: white;
 }
 .navbar .navbar-collapse {
-    text-align: right;
+    text-align: center;
 }
 .navbar .navbar-nav {
     display: inline-block;
@@ -143,7 +147,7 @@ footer {
     font-weight: 600;
 }
 .jumbotron {
-    background-image: url("../assets/home/4.jpg");
+    background-image: url("../assets/home/5.jpg");
     background-size: cover;
     margin-bottom: 0;
     background-position: center center;
@@ -155,17 +159,15 @@ footer {
 .jumbo-container {
     height: 100vh;
     min-height: 100vh;
-    text-align: left;
 }
 .jumbo-header {
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
+    margin-top: 25%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 .jumbo-header h1 {
     color: white;
+    font-size: 7em;
 }
 .jumbo-div {
     text-align: left;
@@ -186,9 +188,10 @@ footer {
     line-height: 14px;
 }
 .change {
-    color: #ff6060;
+    color: red;
 }
 .h1-decoration {
+    padding: 6px;
     background: rgba(0, 0, 0, 0.5);
 }
 .navbar-bg {
