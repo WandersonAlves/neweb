@@ -3,7 +3,8 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    background-image: url("../assets/crossed_stripes.png");
+    background-color: #0f0f0f;
+    background-image: url("http://www.transparenttextures.com/patterns/black-scales.png");
     background-repeat: repeat;
 }
 p {
@@ -192,6 +193,10 @@ footer {
 }
 .h1-decoration {
     padding: 6px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.div-decoration {
+    padding: 30px;
     background: rgba(0, 0, 0, 0.5);
 }
 .navbar-bg {
