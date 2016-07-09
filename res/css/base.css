@@ -3,13 +3,13 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    background-color: #0f0f0f;
+    background-color: #060606;
     background-image: url("http://www.transparenttextures.com/patterns/black-scales.png");
     background-repeat: repeat;
 }
 p {
     color: white;
-    font-size: 1.15em;
+    font-size: 1.02em;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
 }
@@ -35,11 +35,14 @@ footer {
 .sobre-inner img {
     margin-top: 20px;
     width: 180px;
-    border: 2px solid red;
+    border: 8px solid red;
     border-radius: 150px;
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
     margin-bottom: 15px;
+    -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
 }
 .global-margin {
     margin: 5%;
@@ -71,9 +74,12 @@ footer {
 .navbar-default {
     border-color: rgba(0, 0, 0, 0);
     border-top: red 4px solid;
-    background: transparent;
+    background: black;
     -webkit-transition: all 0.2s linear 0.1s;
     transition: all 0.2s linear 0.1s;
+    -webkit-box-shadow: 0px 12px 65px 25px black;
+    -moz-box-shadow: 0px 12px 65px 25px black;
+    box-shadow: 0px 12px 100px 50px black;
 }
 .navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus {
     color: red;
@@ -155,7 +161,7 @@ footer {
     background-repeat: no-repeat;
     background-attachment: fixed!important;
     overflow: hidden;
-    box-shadow: inset 0px 119px 172px 3px rgba(0, 0, 0, 0.75);
+    /*box-shadow: inset 0px 119px 172px 3px rgba(0, 0, 0, 0.75);*/
 }
 .jumbo-container {
     height: 100vh;
