@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     copy = require('gulp-copy2'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create(),
-    htmlreplace = require('gulp-html-replace');
+    htmlreplace = require('gulp-html-replace'),
+    imagemin = require('gulp-imagemin'),
+    imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
 gulp.task('default', function () {
     'use strict';
@@ -16,25 +18,19 @@ gulp.task('default', function () {
 gulp.task('build-js', function () {
     'use strict';
     return gulp.src([
-        'bower_components/PACE/pace.min.js',
-        'bower_components/angular/angular.js',
-        'res/js/directives.js',
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
-        'bower_components/velocity/velocity.min.js',
-        'bower_components/ResponsiveSlides/responsiveslides.js',
-        'res/js/control.js'
+        'bower_components/angular/angular.min.js',
+        'neweb-module.js',
+        'controllers/main-controller.js'
     ]).pipe(concat('build.js')).pipe(gulp.dest('public/'));
 });
 
 gulp.task('build-css', function () {
     'use strict';
     return gulp.src([
-        'res/css/base.css',
-        'res/css/fixed-navigation-bar.css',
-        'res/css/load-screen.css',
-        'res/css/pace-dataurl.css',
-        'res/css/jquery.mCustomScrollbar.css'
+        'bower_components/bootstrap/dist/css/bootstrap.min.css',
+        'bower_components/animate.css/animate.min.css',
+        'res/css/base.css'
     ]).pipe(concatCss("build.css")).pipe(cleanCss({
         compatibility: 'ie8'
     })).pipe(gulp.dest('public/'));
@@ -44,16 +40,12 @@ gulp.task('copy', function () {
     'use strict';
     var paths = [
         {
-            src: 'res/css/mCSB_buttons.png',
-            dest: 'public/'
-        },
-        {
             src: 'res/assets/**',
             dest: 'public/res/assets/'
         },
         {
-            src: 'res/views/**',
-            dest: 'public/res/views/'
+            src: 'views/**',
+            dest: 'public/views/'
         }
     ];
     return copy(paths);
@@ -68,12 +60,19 @@ gulp.task('html-replace', function () {
         })).pipe(gulp.dest('public/'));
 });
 
+gulp.task('image-min', function() {
+    'use strict';
+    gulp.src(['res/assets/**/*'])
+        .pipe(imagemin([imagemin.gifsicle(), imagemin.jpegtran(), imagemin.optipng(), imagemin.svgo(), imageminJpegRecompress({method: 'smallfry'})], {verbose: true}))
+        .pipe(gulp.dest('public/res/assets'));
+});
+
 gulp.task('build', function () {
     'use strict';
     var callback = function () {
         gutil.log("Remember to run 'firebase deploy' on your terminal!");
     };
-    runSequence('build-js', 'build-css', 'copy', 'html-replace', callback);
+    runSequence('build-js', 'build-css', 'copy', 'html-replace', 'image-min', callback);
 
 });
 
