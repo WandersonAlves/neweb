@@ -17,39 +17,48 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="red">
     <!-- build:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="res/css/base.css">
     <!-- endbuild -->
 </head>
 
 <body ng-controller="MainController as mainControll">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed hamburguer" data-toggle="collapse" data-target="#options" aria-expanded="false">
-                    <span></span>
-                </button>
-                <!--<a class="navbar-brand" href="#"><img src="res/img/logo_jbv.png"></a>-->
-            </div>
-            <div class="collapse navbar-collapse" id="options">
-                <ul class="nav navbar-nav">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
     <div class="jumbotron" id="top">
         <div class="container jumbo-container">
             <div class="jumbo-header">
-                <div class="row">
+                <div class="row home-row-margin ">
                     <div class="col-md-6 col-md-offset-3">
                         <h1 class="font-center megrim">NE<span class="change">W</span>.EB<span class="change">/</span></h1>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2 h1-decoration">
-                      <p class="font-center">Temos a melhor solução para o seu site, com agilidade e o suporte que você precisa</p>
+                    <div class="col-md-2 col-md-offset-3">
+                        <div class="row">
+                            <img class="img-responsive center-block smaller" src="res/assets/home/portfolio.jpg" alt="Foto-Popoto">
+                        </div>
+                        <div class="line-height">
+                            <p class="font-center">Portfolio</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row">
+                            <img class="img-responsive center-block smaller" src="res/assets/home/sobre.jpg" alt="Foto-Popoto">
+                        </div>
+                        <div class="line-height">
+                            <p class="font-center">Sobre</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row">
+                            <img class="img-responsive center-block smaller" src="res/assets/home/contato.jpg" alt="Foto-Popoto">
+                        </div>
+                        <div class="line-height">
+                            <p class="font-center">Contato</p>
+                        </div>
                     </div>
                 </div>
             </div>

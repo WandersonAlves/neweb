@@ -44,6 +44,22 @@ footer {
     -moz-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
 }
+.smaller {
+    width: 128px;
+    border: 3px solid red;
+    border-radius: 75px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+}
+.smaller:hover {
+    -webkit-animation: pulse infinite 1s;
+    animation: pulse infinite 1s;
+    cursor: pointer;
+}
 .global-margin {
     margin: 5%;
 }
@@ -62,36 +78,17 @@ footer {
 .angular {
     color: red
 }
-.navbar-default .navbar-nav> li> a {
-    color: white;
-    font-weight: 600;
-    -webkit-transition: all 0.2s linear 0.1s;
-    transition: all 0.2s linear 0.1s;
-}
 
 /** Borda do menu responsivo no topo **/
 
 .navbar-default {
     border-color: rgba(0, 0, 0, 0);
-    border-top: red 4px solid;
     background: black;
     -webkit-transition: all 0.2s linear 0.1s;
     transition: all 0.2s linear 0.1s;
     -webkit-box-shadow: 0px 12px 65px 25px black;
     -moz-box-shadow: 0px 12px 65px 25px black;
     box-shadow: 0px 12px 100px 50px black;
-}
-.navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus {
-    color: red;
-}
-.navbar-default .navbar-nav> .active> a, .navbar-default .navbar-nav> .active> a:hover, .navbar-default .navbar-nav> .active> a:focus {
-    color: red;
-    cursor: pointer;
-    background-color: transparent;
-    box-shadow: 0px -3px 0px 0px red inset;
-}
-.navbar-default .navbar-nav> li> a:focus {
-    color: white;
 }
 .selected {
     box-shadow: inset 0px -5px 0px 0px #444444;
@@ -163,12 +160,16 @@ footer {
     overflow: hidden;
     /*box-shadow: inset 0px 119px 172px 3px rgba(0, 0, 0, 0.75);*/
 }
+.jumbotron p {
+    font-weight: 400;
+    font-size: 1.02em
+}
 .jumbo-container {
     height: 100vh;
     min-height: 100vh;
 }
 .jumbo-header {
-    margin-top: 25%;
+    margin-top: 22%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -183,6 +184,9 @@ footer {
 }
 .row {
     margin: 0;
+}
+.home-row-margin {
+    margin-bottom: 55px;
 }
 .hamburguer span:before {
     content: "\f11c";
