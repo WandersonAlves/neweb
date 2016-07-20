@@ -23,52 +23,52 @@
 </head>
 
 <body ng-controller="MainController as mainControll">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
-                <h2 class="megrim font-center">NE<span class="change">W</span>.EB<span class="change">/</span></h2>
+                <h2 class="megrim font-center" ng-class="{smaller: waypoints.globals.down}">NE<span class="change">W</span>.EB<span class="change">/</span></h2>
             </div>
         </div>
     </nav>
-    <div class="jumbotron" id="top">
-        <div class="container jumbo-container">
-            <div class="jumbo-header">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
                 <div class="row">
-                    <div class="col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
-                        <div class="row">
-                            <img class="img-responsive center-block menu-img" src="res/assets/home/portfolio.jpg" alt="Foto-Popoto">
-                        </div>
-                        <div class="line-height">
-                            <p class="font-center">Portfolio</p>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-lg-2">
-                        <div class="row">
-                            <img class="img-responsive center-block menu-img" src="res/assets/home/sobre.jpg" alt="Foto-Popoto">
-                        </div>
-                        <div class="line-height">
-                            <p class="font-center">Sobre</p>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-lg-2">
-                        <div class="row">
-                            <img class="img-responsive center-block menu-img" src="res/assets/home/contato.jpg" alt="Foto-Popoto">
-                        </div>
-                        <div class="line-height">
-                            <p class="font-center">Contato</p>
-                        </div>
-                    </div>
+                    <img class="img-responsive center-block menu-img" src="res/assets/home/portfolio.jpg" alt="Foto-Popoto">
+                </div>
+                <div class="line-height">
+                    <p class="font-center">Portfolio</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-2">
+                <div class="row">
+                    <img class="img-responsive center-block menu-img" src="res/assets/home/sobre.jpg" alt="Foto-Popoto">
+                </div>
+                <div class="line-height">
+                    <p class="font-center">Sobre</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-2">
+                <div class="row">
+                    <img class="img-responsive center-block menu-img" src="res/assets/home/contato.jpg" alt="Foto-Popoto">
+                </div>
+                <div class="line-height">
+                    <p class="font-center">Contato</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="global-margin">
+    <div class="global-margin" zum-waypoint="waypoints" down="down" up="up" offset="20%">
         <div id="sobre" ng-include="mainControll.templates.sobre"></div>
     </div>
 
     <!-- build:js -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script src="bower_components/angular-waypoints/dist/angular-waypoints.js"></script>
     <script src="neweb-module.js"></script>
     <script src="controllers/main-controller.js"></script>
     <!-- endbuild -->

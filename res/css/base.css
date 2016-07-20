@@ -3,9 +3,15 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    background-color: #060606;
-    background-image: url("http://www.transparenttextures.com/patterns/black-scales.png");
-    background-repeat: repeat;
+    background: linear-gradient(183deg, #5a2466, #7d2548, #25527d, #aa352e);
+    background-size: 800% 800%;
+    -webkit-animation: gradientbg 20s ease infinite;
+    -moz-animation: gradientbg 20s ease infinite;
+    animation: gradientbg 20s ease infinite;
+    margin-bottom: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed!important;
 }
 p {
     color: white;
@@ -35,10 +41,17 @@ footer {
 }
 .megrim {
     font-family: 'Megrim', cursive;
+    -webkit-transition: all 0.2s linear 0.1s;
+    transition: all 0.2s linear 0.1s;
+}
+.smaller {
+    font-size: 2.4em;
+    -webkit-transition: all 0.2s linear 0.1s;
+    transition: all 0.2s linear 0.1s;
 }
 .sobre-inner img {
     margin-top: 20px;
-    width: 180px;
+    width: 140px;
     border: 4px solid red;
     border-radius: 150px;
     -webkit-border-radius: 150px;
@@ -171,9 +184,9 @@ footer {
     font-weight: 400;
     font-size: 1.02em
 }
-.jumbo-container {
-    height: 100vh;
-    min-height: 100vh;
+.container {
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
 .jumbo-header {
     margin-top: 22%;
@@ -207,7 +220,7 @@ footer {
 }
 .div-decoration {
     padding: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.25);
 }
 .margin-bottom-0 {
     margin-bottom: 0px;
@@ -217,41 +230,53 @@ footer {
     margin-right: 35px;
 }
 @media screen and (max-width: 768px) {
-    .jumbotron h1, .jumbotron .h1 {
-        font-size: 3em;
-    }
-    .jumbotron p {
-        font-size: 1em;
-    }
     .font-justify {
         text-align: left;
+    }
+    .megrim {
+      font-size: 2.0em;
+    }
+    .smaller {
+      font-size: 1.6em;
     }
     .margin {
         margin-left: 15px;
         margin-right: 15px;
     }
-    .jumbo-header {
-        margin-top: 62%;
-    }
-    .jumbo-div {
-        margin-left: 0px;
-    }
     .menu-img {
-      width: 112px;
+        width: 112px;
     }
 }
 @-webkit-keyframes gradientbg {
-    0%{background-position:0% 75%}
-    50%{background-position:100% 26%}
-    100%{background-position:0% 75%}
+    0% {
+        background-position: 0% 75%
+    }
+    50% {
+        background-position: 100% 26%
+    }
+    100% {
+        background-position: 0% 75%
+    }
 }
 @-moz-keyframes gradientbg {
-    0%{background-position:0% 75%}
-    50%{background-position:100% 26%}
-    100%{background-position:0% 75%}
+    0% {
+        background-position: 0% 75%
+    }
+    50% {
+        background-position: 100% 26%
+    }
+    100% {
+        background-position: 0% 75%
+    }
 }
 @keyframes gradientbg {
-    0%{background-position:0% 75%}
-    50%{background-position:100% 26%}
-    100%{background-position:0% 75%}
+    0% {
+        background-position: 0% 75%
+    }
+    50% {
+        background-position: 100% 26%
+    }
+    100% {
+        background-position: 0% 75%
+    }
 }

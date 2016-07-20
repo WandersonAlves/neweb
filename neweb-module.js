@@ -1,4 +1,4 @@
 (function() {
     angular
-        .module("neweb", []);
+        .module("neweb", ['zumba.angular-waypoints']);
 })();
