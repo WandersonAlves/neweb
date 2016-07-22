@@ -30,7 +30,8 @@ gulp.task('build-css', function () {
     return gulp.src([
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/animate.css/animate.min.css',
-        'res/css/base.css'
+        'res/css/base.css',
+        'res/css/scroll.css'
     ]).pipe(concatCss("build.css")).pipe(cleanCss({
         compatibility: 'ie8'
     })).pipe(gulp.dest('public/'));

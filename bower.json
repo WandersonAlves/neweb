@@ -21,8 +21,7 @@
     "angular": "^1.5.7",
     "jquery": "^3.0.0",
     "bootstrap": "^3.3.6",
-    "animate.css": "^3.5.2",
-    "angular-waypoints": "^2.0.0"
+    "animate.css": "^3.5.2"
   },
   "resolutions": {
     "jquery": "^3.0.0"
