@@ -24,8 +24,8 @@
 </head>
 
 <body ng-controller="MainController as mainControll">
-    <div class="jumbotron" id="top">
-        <div class="container jumbo-container">
+    <div class="jumbotron" >
+        <div class="container jumbo-container" id="particles-js">
             <div class="jumbo-header">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
@@ -47,6 +47,8 @@
 
     <!-- build:js -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/particles.js/particles.min.js"></script>
+    <script src="controllers/particles.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="neweb-module.js"></script>
     <script src="controllers/main-controller.js"></script>
