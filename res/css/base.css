@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans|Aref+Ruqaa);
 @import url(https://fonts.googleapis.com/css?family=Megrim);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 p {
     color: black;
     font-size: 1.15em;
@@ -17,15 +18,37 @@ h1 {
 }
 footer {
     font-size: 0.85em;
-    background: #191919 url("../img/dust.png") repeat;
-    height: 180px;
+    background: linear-gradient(90deg, #1b131d, #300f1c, #09131d, #2f0f0d);
+    background-size: 800% 800%;
+    -webkit-animation: gradientbg 30s ease infinite;
+    -moz-animation: gradientbg 30s ease infinite;
+    animation: gradientbg 30s ease infinite;
+    margin-bottom: 0;
+    height: 230px;
     margin-top: 60px;
     padding-bottom: 30px;
     padding-top: 80px;
 }
+.aref {
+    font-family: 'Aref Ruqaa', serif;
+}
 .left-side, .right-side {
     float: none;
     display: table-cell;
+}
+.margin-0 {
+    margin: 0px;
+}
+.span {
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    color: #C9C9C9;
+    font-family: 'Open Sans', sans-serif;
+}
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 .vertical-align-middle {
     vertical-align: middle;
@@ -82,19 +105,6 @@ footer {
     background: url("../assets/about/material.jpg");
     background-size: cover;
 }
-
-/** Borda do menu responsivo no topo **/
-
-.black-scales {
-    border-color: rgba(0, 0, 0, 0);
-    background: black;
-    position: absolute;
-    margin-bottom: 20px;
-    width: 100%;
-    border: 1px solid transparent;
-    -webkit-transition: all 0.2s linear 0.1s;
-    transition: all 0.2s linear 0.1s;
-}
 .jumbo-divisor {
     height: 1px;
     background: transparent;
@@ -150,6 +160,12 @@ footer {
 .notosans {
     color: #02483E;
 }
+.flaticon-heart-shape:before {
+  font-size: 15px !important;
+  margin: 0px !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
 .font-weight-300 {
     font-weight: 300;
 }
@@ -174,7 +190,7 @@ footer {
     -moz-box-shadow: inset 0px 0px 234px 60px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0px 0px 234px 60px rgba(0, 0, 0, 0.75);
 }
-#particles-js canvas{
+#particles-js canvas {
     position: absolute;
     top: 0;
     left: 0;
