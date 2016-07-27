@@ -19,6 +19,8 @@ gulp.task('build-js', function () {
     'use strict';
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/particles.js/particles.min.js',
+        'controllers/particles.js',
         'bower_components/angular/angular.min.js',
         'neweb-module.js',
         'controllers/main-controller.js'
@@ -47,6 +49,10 @@ gulp.task('copy', function () {
         {
             src: 'views/**',
             dest: 'public/views/'
+        },
+        {
+            src: 'res/particlesjs-config.json',
+            dest: 'public/res/particlesjs-config.json'
         }
     ];
     return copy(paths);
