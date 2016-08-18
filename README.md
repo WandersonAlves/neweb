@@ -14,4 +14,4 @@ WIP Project
 # Build
 `gulp build`
 # Testing
-`protractor spec/conf.js` note: `node server.js` must be running
+`protractor spec/conf.js` note: `node server.js` must be running.
